@@ -1,0 +1,88 @@
+@font-face {
+	font-family: "Proxima Nova";
+	src: url("Proxima_Nova_Font.otf");
+}
+
+body {
+	font-family: "Proxima Nova";
+	background-color: black;
+}
+
+#clock {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 50%;
+	height: 50%;
+}
+
+#top {
+	position: relative;
+	top: -650px;
+	left: -360px;
+	font-size: 16px;
+	color: white;
+	line-height: 700%;
+}
+#right {
+	position: relative;
+	top: 0px;
+	left: -150px;
+	font-size: 16px;
+	color: white;
+	transform: rotate(.25turn);
+}
+#left {
+	position: relative;
+	top: -440px;
+	left: -980px;
+	font-size: 16px;
+	color: white;
+	transform: rotate(.75turn);
+}
+#bottom {
+	position: relative;
+	top: 50px;
+	left: -360px;
+	font-size: 16px;
+	color: white;
+	line-height: 700%;
+}
+
+#minute-hand {
+	position: relative;
+	top: -250px;
+	font-size: 24px;
+	color: white;
+	font-weight: bold;
+	transform-origin: left;
+	animation: 60s linear spin infinite;
+}
+
+#hour-hand {
+	position: relative;
+	top: -330px;
+	font-size: 28px;
+	color: white;
+	font-weight: bold;
+	transform-origin: left;
+	animation: 3600s linear spin infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(-.25turn);
+	}
+	25% {
+		transfrom: rotate(0turn);
+	}
+	50% {
+		transform: rotate(.25turn);
+	}
+	75% {
+		transform: rotate(.5turn);
+	}
+	100% {
+		transform: rotate(.75turn)
+	}
+}
